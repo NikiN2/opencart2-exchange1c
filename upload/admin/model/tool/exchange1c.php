@@ -3151,7 +3151,8 @@ class ModelToolExchange1c extends Model {
 				// Читаем изготовителя, добавляем/обновляем его в базу
 				if ($product->Изготовитель) {
 					$this->log("[i] Загрузка производителя из тега Изготовитель",2);
-					$data['manufacturer_id'] = $this->setManufacturer($product->Изготовитель->Наименование, $product->Изготовитель->Ид);
+					//$data['manufacturer_id'] = $this->setManufacturer($product->Изготовитель->Наименование, $product->Изготовитель->Ид);
+					$data['manufacturer_id'] = $this->setManufacturer("Теремок", 1);
 				}
 
 				// Статус по-умолчанию при отсутствии товара на складе
